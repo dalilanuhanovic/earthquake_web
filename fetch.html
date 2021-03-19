@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>InSchock</title>
+    
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+  <script src="https://kit.fontawesome.com/52bc416903.js"></script> 
+  
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section class="colored-section" id="title">
+
+        <div class="container-fluid">
+    
+    
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <h1 class="navbar-brand" href="">InShock</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#pimg1">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#cta">Latest earthquakes</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        </section>
+    
+      
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                Welcome to InShock
+            </span>
+        </div>
+    </div>
+    <section id="features">
+    <div id="map"></div>
+</section>
+    <div class="flex-container"></div>
+
+    <section id="cta">
+        <div class="listazemljotresa">
+        <center><h2>The biggest earthquakes in the last 30 days</h2></center>
+        <ul id="lista"></ul>
+        
+    </div>
+    </div>
+</section> 
+
+<section id="about">
+    <div class="container-fluid">
+<center>
+        <i class="fab fa-twitter fa-lg footer-icon"></i>
+        <i class="fab fa-facebook-f fa-lg footer-icon"></i>
+        <i class="fab fa-instagram fa-lg footer-icon"></i>
+        <i class="fas fas-footer fa-envelope fa-lg footer-icon"></i>
+        
+        <p class="p-footer">© Copyright 2020  Usmjerenje za Kompjuterske i informacijske tehnologije.
+          All Rights Reserved. Fakultet za saobraćaj i komunikacije</p></center>
+    </div>
+      </footer>
+</section>
+
+    
+    
+    <script src="fetchovanje.js"></script>
+   
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-R4FnQO1DhEsOuGy75nqrT7uUaj1w2bk&callback=initMap">
+            </script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script>
+  Cookies.set("Earthquakes" , "true", {expires: 2});
+  var myCookie = Cookies.get('Earthquakes');
+  var title= document.querySelector('h1');
+  console.log(myCookie);
+  if(myCookie){
+    title.classList.add('cookie');
+  }
+  if(myCookie='false'){
+    title.classList.remove('cookie');
+
+  }
+</script>
+</body>
+</html>
