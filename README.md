@@ -7,13 +7,15 @@
 # Pokretanje
 
 Za pokretanje ove web stranice potreban je bilo koji od standardnih web pretraživača.
--Pokrenuti xampp(apache,mysql).
--Prebaciti u htdocs folder projekta.
--Pokrenuti preko localhosta
+
+•	Pokrenuti xampp (apache, mysql)
+•	Prebaciti u htdocs folder projekta
+•	Pokrenuti preko localhosta
 
 
 
-Authors:	 
+
+Autori:	 
 •	Anida Mujezin
 •	Dalila Nuhanović
 •	Amer Hero
